@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jp.android.imaizumiriko.clothesdivide.CodekanseiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="戻る" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageview_tops"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/pants_wrong"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/imageview_bottoms"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/pants_wrong"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/hozon"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:onClick="Uri uri; String stringUri; stringUri = uri.toString(); "
+            android:text="保存"
+            tools:layout_editor_absoluteX="280dp"
+            tools:layout_editor_absoluteY="503dp" />
+    </LinearLayout>
+
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item android:state_pressed="true">
+
+            <layer-list>
+
+                <item android:top="3dp">
+
+                    <shape>
+
+                        <solid android:color="#00bcd4" />
+
+                        <corners android:radius="8dp" />
+                    </shape>
+                </item>
+            </layer-list>
+        </item>
+
+        <item android:state_focused="true">
+
+            <layer-list>
+
+                <item android:top="3dp">
+
+                    <shape>
+
+                        <solid android:color="#00bcd4" />
+
+                        <corners android:radius="8dp" />
+                    </shape>
+                </item>
+            </layer-list>
+        </item>
+
+        <item>
+
+            <layer-list>
+
+                <item>
+
+                    <shape>
+
+                        <solid android:color="#dddddd" />
+
+                        <corners android:radius="8dp" />
+                    </shape>
+                </item>
+
+                <item android:bottom="3dp">
+
+                    <shape>
+
+                        <solid android:color="#00bcd4" />
+
+                        <corners android:radius="8dp" />
+                    </shape>
+                </item>
+            </layer-list>
+        </item>
+
+    </selector>
+
+</LinearLayout>
+

@@ -1,0 +1,28 @@
+ private void showGallery() {
+        //カメラの起動Intentの用意
+        String photoName = System.currentTimeMillis() + ".jpg";
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(MediaStore.Images.Media.TITLE, photoName);
+        contentValues.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
+        m_uri = getContentResolver()
+                .insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
+
+        Intent intentCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        intentCamera.putExtra(MediaStore.EXTRA_OUTPUT, m_uri);
+        
+        // ギャラリー用のIntent作成
+        Intent intentGallery;
+        if (Build.VERSION.SDK_INT < 19) {
+            intentGallery = new Intent(Intent.ACTION_GET_CONTENT);
+            intentGallery.setType("image/*");
+        } else {
+            intentGallery = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intentGallery.addCategory(Intent.CATEGORY_OPENABLE);
+            intentGallery.setType("image/jpeg");
+        }
+        Intent intent = Intent.createChooser(intentCamera, "画像の選択");
+        intent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{intentGallery});
+        startActivityForResult(intent, REQUEST_CHOOSER);
+    }
+
+

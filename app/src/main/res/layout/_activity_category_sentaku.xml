@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/modoru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="＜"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <Button
+        android:id="@+id/tops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="トップス"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <Button
+        android:id="@+id/onepeace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ワンピース"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <Button
+        android:id="@+id/scart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="スカート"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <Button
+        android:id="@+id/pants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="ズボン"
+        app:layout_constraintTop_toBottomOf="@+id/scart"
+        tools:layout_editor_absoluteX="72dp" />
+
+    <Button
+        android:id="@+id/shoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="靴"
+        app:layout_constraintBottom_toTopOf="@+id/fashion_"
+        app:layout_constraintTop_toBottomOf="@+id/pants"
+        tools:layout_editor_absoluteX="72dp" />
+
+    <Button
+        android:id="@+id/fashion_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="アクセサリー小物"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="461dp" />
+</android.support.constraint.ConstraintLayout>
